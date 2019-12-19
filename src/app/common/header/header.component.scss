@@ -1,0 +1,29 @@
+@import "../../../assets/styles/helpers/varibles";
+
+.header {
+  background-color: $primary-bg;
+}
+
+.logo {
+  color: #fff;
+}
+
+.menu {
+  display: flex;
+  padding: 15px 0;
+  align-items: center;
+  &__list {
+    list-style: none;
+    margin: 0 0 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    margin: 0 5px;
+  }
+  &__link {
+    padding: 0 5px;
+    color: #fff;
+
+  }
+}

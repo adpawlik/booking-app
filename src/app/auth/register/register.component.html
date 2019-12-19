@@ -1,0 +1,50 @@
+<div class="row justify-content-center">
+    <div class="auth">
+      <div class="auth__box">
+        <h3 class="auth__title">Register</h3>
+        <form [formGroup]="registerForm" (ngSubmit)="register(registerForm)">
+          <mat-form-field class="d-block">
+            <input  matInput
+                    placeholder="Username"
+                    type="text"
+                    id="username"
+                    formControlName="username">
+          <mat-error>Username is required</mat-error>
+          </mat-form-field>
+          <mat-form-field class="d-block">
+              <input  matInput
+                      placeholder="Email"
+                      type="text"
+                      id="email"
+                      formControlName="email">
+              <mat-error *ngIf="isInvalidForm('email')" >
+                <div *ngIf="isRequired('email')">Email is required</div>
+                <div *ngIf="registerForm.controls['email'].errors.pattern">Must be valid email format!</div>
+              </mat-error>
+          </mat-form-field>
+          <mat-form-field class="d-block">
+              <input  matInput
+                      placeholder="Password"
+                      type="password"
+                      id="password"
+                      formControlName="password">
+              <mat-error>Password is required</mat-error>
+          </mat-form-field>
+          <mat-form-field class="d-block">
+              <input  matInput
+                      placeholder="Confirm Password"
+                      type="password"
+                      id="passwordConfirm"
+                      formControlName="passwordConfirm">
+              <mat-error>Confirm Password is required</mat-error>
+          </mat-form-field>
+          <button [disabled]="!registerForm.valid" type="submit" mat-raised-button  class="std-btn auth__btn">Register</button>
+        </form>
+        <div *ngIf="errors.length > 0" class="alert alert-danger">
+          <p *ngFor="let error of errors" class="auth__error">
+            {{error.detail}}
+          </p>
+        </div>
+      </div>
+    </div>
+</div>

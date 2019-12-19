@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import 'assets/styles/helpers/varibles';
+@import 'assets/styles/helpers/bootstrap-custom';
+@import 'assets/styles/base/ip-bootstrap';
+
+.std-btn {
+  background-color: $primary-bg;
+  color: white;
+}
