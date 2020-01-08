@@ -1,0 +1,12 @@
+.std-btn {
+  background-color: $primary-bg;
+  color: white;
+  transition: background-color 0.3s;
+  padding: 12px 24px;
+  min-height: 50px;
+  min-width: 50px;
+  &:hover {
+    color: white;
+    background-color: darken($primary-bg,5%);
+  }
+}

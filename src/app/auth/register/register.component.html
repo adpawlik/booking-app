@@ -38,7 +38,7 @@
                       formControlName="passwordConfirm">
               <mat-error>Confirm Password is required</mat-error>
           </mat-form-field>
-          <button [disabled]="!registerForm.valid" type="submit" mat-raised-button  class="std-btn auth__btn">Register</button>
+          <button [disabled]="!registerForm.valid" type="submit" class="btn std-btn auth__btn">Register</button>
         </form>
         <div *ngIf="errors.length > 0" class="alert alert-danger">
           <p *ngFor="let error of errors" class="auth__error">

@@ -3,9 +3,11 @@
   max-width: 100%;
   padding: 0 15px;
   &__box {
-    padding: 20px 15px;
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
     margin: 50px 0;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   }
   &__title {
     text-align: center;
@@ -14,7 +16,7 @@
     margin: 0;
   }
   &__btn {
-    margin-bottom: 10px;
+    margin: 15px 0;
     width: 100%;
   }
 }
