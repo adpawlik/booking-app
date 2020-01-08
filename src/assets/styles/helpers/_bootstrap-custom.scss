@@ -1,0 +1,21 @@
+$body-bg: #f7f7f7;
+$body-color: #383838;
+
+$link-color: #febb02;
+$link-hover-color: $body-color;
+$link-hover-decoration: none;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1110px,
+);

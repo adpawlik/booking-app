@@ -12,7 +12,7 @@ mongoose.connect(config.DB_URI, {
   useUnifiedTopology: true
 }).then(() => {
   const fkDb = new FkDb();
- /*  fkDb.seeDb(); */
+  /* fkDb.seeDb(); */
 });
 mongoose.set('useCreateIndex', true)
 
