@@ -6,16 +6,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
 import { MaterialModule } from './material/material.module';
+import { FlatModule } from './flat/flat.module';
+import { SharedModule } from './common/shared.module';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './common/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     HomeComponent
   ],
   imports: [
@@ -24,7 +26,9 @@ import { HomeComponent } from './pages/home/home.component';
     AuthModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FlatModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
