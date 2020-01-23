@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
       },
       (errorResponse) => {
         this.errors = errorResponse.error.errors;
-      })
+      });
   }
 
 }
