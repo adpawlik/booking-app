@@ -9,6 +9,7 @@ import { FlatService } from './shared/flat.service';
 import { FlatRoutingModule } from './flat-routing.module';
 import { FlatDetailComponent } from './flat-detail/flat-detail.component';
 import { SharedModule } from '../common/shared.module';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SharedModule } from '../common/shared.module';
   imports: [
     CommonModule,
     FlatRoutingModule,
-    SharedModule
+    SharedModule,
+    MaterialModule
   ],
   providers: [
     FlatService

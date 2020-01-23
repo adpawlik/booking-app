@@ -19,7 +19,7 @@ export class FlatDetailComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(
       (params) => {
-        this.getFlat(params['flatId']);
+        this.getFlat(params.flatId);
       });
   }
 
@@ -28,6 +28,6 @@ export class FlatDetailComponent implements OnInit {
       (flat: Flat) => {
         this.flat = flat;
         this.loader = false;
-      })
+      });
   }
 }

@@ -12,7 +12,9 @@ export class AppComponent implements OnInit {
   constructor(private auth: AuthService) {}
 
   ngOnInit() {
-    if (!this.auth.isAuthenticated()) this.auth.logout();
+    if (!this.auth.isAuthenticated()) {
+      this.auth.logout();
+    }
   }
 
 }

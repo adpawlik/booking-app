@@ -6,8 +6,10 @@ export interface Flat {
   category: string;
   images: string;
   description: string;
+  guests: number;
+  beds: number;
   bedrooms: number;
-  rooms: number;
+  bathrooms: number;
   dailyRate: number;
   createdAt: string;
 }

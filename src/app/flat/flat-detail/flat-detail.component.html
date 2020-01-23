@@ -1,7 +1,38 @@
-<div *ngIf="flat" class="flat-detail">
-  <div class="container">
-    <p>{{flat.id}}</p>
-    <p>{{flat.title}}</p>
+<div *ngIf="flat" class="flat-main">
+  <div class="flat-main__image-wrapper">
+    <img src="{{flat.images}}" alt="" class="flat-main__image">
   </div>
+  <div class="container flat-content">
+   <div class="row">
+     <div class="col-md-7">
+      <div class="flat-detail">
+        <div class="flat-detail-top">
+          <h2 class="flat-detail-top__title">{{flat.title}}</h2>
+          <div class="flat-detail-top__group">
+            <span class="flat-detail-top__category">{{flat.category}} in </span>
+            <span class="flat-detail-top__street">{{flat.street}} </span>
+            <span class="flat-detail-top__city">{{flat.city}}</span>
+          </div>
+        </div>
+        <div class="flat-detail-info">
+          <p class="flat-detail-info__room-info"><mat-icon aria-hidden="false" aria-label="Guests" class="flat-detail-info__icon">person</mat-icon>{{flat.guests}} guests</p>
+          <p class="flat-detail-info__room-info"><mat-icon aria-hidden="false" aria-label="beds" class="flat-detail-info__icon">single_bed</mat-icon>{{flat.beds}} beds</p>
+          <p class="flat-detail-info__room-info"><mat-icon aria-hidden="false" aria-label="Bedrooms" class="flat-detail-info__icon">king_bed</mat-icon>{{flat.bedrooms}} bedrooms</p>
+          <p class="flat-detail-info__room-info"><mat-icon aria-hidden="false" aria-label="Bathrooms" class="flat-detail-info__icon">bathtub</mat-icon>{{flat.bathrooms}} bathrooms</p>
+        </div>
+        <p>{{flat.description}}</p>
+        <div class="flat-detail-map">
+          <app-map [location]="flat.city + ', ' +  flat.street"></app-map>
+        </div>
+      </div>
+     </div>
+     <div class="col-md-5">
+       <div class="flat-booking">
+         Booking component here.
+       </div>
+     </div>
+   </div>
+  </div>
+
 </div>
 <app-loader [display]="loader"></app-loader>

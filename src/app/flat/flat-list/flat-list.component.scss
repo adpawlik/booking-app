@@ -1,3 +1,7 @@
 .flat-listing {
   margin-top: 50px;
+  &__btn {
+    display: block;
+    margin: 0 auto 50px auto;
+  }
 }
