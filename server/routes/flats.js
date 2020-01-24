@@ -15,34 +15,21 @@ router.get('', (req, res) => {
       .limit(perPage)
       .sort( 'createdAt' )
       .exec((err, foundFlats) => {
-
     if (err) {
       return res.status(422).send({errors: normErrors(err.errors)});
     }
-
     if (foundFlats.length === 0) {
       return res.status(422).send({errors: [{title: 'No flat found!'}]});
     }
-    return res.json(foundFlats);
+    Flat.countDocuments(query).exec((err, count) => {
+      if (err) {
+        return res.status(422).send({errors: normErrors(err.errors)});
+      }
+      return res.json({"page": page, "pageTotal": Math.ceil(count / perPage), "flatsTotal": count, "flats": foundFlats});
+    });
   });
 });
 
-router.get('/all', (req, res) => {
-  const query = {};
-
-  Flat.find(query)
-      .exec((err, foundFlats) => {
-
-    if (err) {
-      return res.status(422).send({errors: normErrors(err.errors)});
-    }
-
-    if (foundFlats.length === 0) {
-      return res.status(422).send({errors: [{title: 'No flat found!'}]});
-    }
-    return res.json({ "all_flats": foundFlats.length});
-  });
-});
 
 router.get('/:id', (req, res) => {
   const flatId = req.params.id;

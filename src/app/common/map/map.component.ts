@@ -15,7 +15,6 @@ export class MapComponent implements OnInit {
 
   ngOnInit() {
     this.url = `https://maps.google.com/maps?q=${this.location}&output=embed`;
-    console.log(this.location);
   }
 
   secureUrl() {

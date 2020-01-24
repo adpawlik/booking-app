@@ -9,9 +9,9 @@
         <div class="flat-detail-top">
           <h2 class="flat-detail-top__title">{{flat.title}}</h2>
           <div class="flat-detail-top__group">
-            <span class="flat-detail-top__category">{{flat.category}} in </span>
-            <span class="flat-detail-top__street">{{flat.street}} </span>
-            <span class="flat-detail-top__city">{{flat.city}}</span>
+            <span class="flat-detail-top__category">{{flat.category | titlecase}} in </span>
+            <span class="flat-detail-top__city">{{flat.city | titlecase}} </span>
+            <span class="flat-detail-top__street">{{flat.street | titlecase}}</span>
           </div>
         </div>
         <div class="flat-detail-info">
