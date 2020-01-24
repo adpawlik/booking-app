@@ -1,0 +1,105 @@
+{
+  "flats": [{
+      "title": "New flats",
+      "city": "Będzin",
+      "street": "11 Listopada",
+      "category": "Studio",
+      "images": "http://via.placeholder.com/700x500",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at urna elit. Cras sit amet elit quis ligula rutrum aliquet. Proin lacus erat, porttitor ac mi sit amet, semper convallis mi. Vestibulum id odio at quam gravida scelerisque. Duis sit amet ligula ornare, finibus ligula a, congue felis. Etiam et semper erat. Nullam in nisi vitae lectus hendrerit lacinia. Etiam scelerisque consectetur tincidunt. Praesent vulputate nunc id ante tempor, consectetur elementum felis viverra. Nullam sollicitudin purus a orci blandit sagittis. In eu leo tincidunt, iaculis nisi sollicitudin, mattis nunc. Quisque fringilla efficitur sapien. Curabitur nec sagittis justo, a semper elit. In ac purus in sem aliquet luctus a et lacus. In hac habitasse platea dictumst.",
+      "guests": 2,
+      "beds": 3,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "dailyRate": 40
+    },
+    {
+      "title": "New flats 2",
+      "city": "Wrocław",
+      "street": "Drukarska",
+      "category": "Apartment",
+      "images": "http://via.placeholder.com/700x500",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at urna elit. Cras sit amet elit quis ligula rutrum aliquet. Proin lacus erat, porttitor ac mi sit amet, semper convallis mi. Vestibulum id odio at quam gravida scelerisque. Duis sit amet ligula ornare, finibus ligula a, congue felis. Etiam et semper erat. Nullam in nisi vitae lectus hendrerit lacinia. Etiam scelerisque consectetur tincidunt. Praesent vulputate nunc id ante tempor, consectetur elementum felis viverra. Nullam sollicitudin purus a orci blandit sagittis. In eu leo tincidunt, iaculis nisi sollicitudin, mattis nunc. Quisque fringilla efficitur sapien. Curabitur nec sagittis justo, a semper elit. In ac purus in sem aliquet luctus a et lacus. In hac habitasse platea dictumst.",
+      "guests": 2,
+      "beds": 5,
+      "bedrooms": 4,
+      "bathrooms": 1,
+      "dailyRate": 100
+    },
+    {
+      "title": "New flats 3",
+      "city": "Wrocław",
+      "street": "listopada",
+      "category": "Studio",
+      "images": "http://via.placeholder.com/700x500",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at urna elit. Cras sit amet elit quis ligula rutrum aliquet. Proin lacus erat, porttitor ac mi sit amet, semper convallis mi. Vestibulum id odio at quam gravida scelerisque. Duis sit amet ligula ornare, finibus ligula a, congue felis. Etiam et semper erat. Nullam in nisi vitae lectus hendrerit lacinia. Etiam scelerisque consectetur tincidunt. Praesent vulputate nunc id ante tempor, consectetur elementum felis viverra. Nullam sollicitudin purus a orci blandit sagittis. In eu leo tincidunt, iaculis nisi sollicitudin, mattis nunc. Quisque fringilla efficitur sapien. Curabitur nec sagittis justo, a semper elit. In ac purus in sem aliquet luctus a et lacus. In hac habitasse platea dictumst.",
+      "guests": 2,
+      "beds": 3,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "dailyRate": 40
+    },
+    {
+      "title": "New flats 4",
+      "city": "Wrocław",
+      "street": "listopada",
+      "category": "Flat",
+      "images": "http://via.placeholder.com/700x500",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at urna elit. Cras sit amet elit quis ligula rutrum aliquet. Proin lacus erat, porttitor ac mi sit amet, semper convallis mi. Vestibulum id odio at quam gravida scelerisque. Duis sit amet ligula ornare, finibus ligula a, congue felis. Etiam et semper erat. Nullam in nisi vitae lectus hendrerit lacinia. Etiam scelerisque consectetur tincidunt. Praesent vulputate nunc id ante tempor, consectetur elementum felis viverra. Nullam sollicitudin purus a orci blandit sagittis. In eu leo tincidunt, iaculis nisi sollicitudin, mattis nunc. Quisque fringilla efficitur sapien. Curabitur nec sagittis justo, a semper elit. In ac purus in sem aliquet luctus a et lacus. In hac habitasse platea dictumst.",
+      "guests": 2,
+      "beds": 3,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "dailyRate": 40
+    },
+    {
+      "title": "New flats 5",
+      "city": "Warszawa",
+      "street": "listopada",
+      "category": "Flat",
+      "images": "http://via.placeholder.com/700x500",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at urna elit. Cras sit amet elit quis ligula rutrum aliquet. Proin lacus erat, porttitor ac mi sit amet, semper convallis mi. Vestibulum id odio at quam gravida scelerisque. Duis sit amet ligula ornare, finibus ligula a, congue felis. Etiam et semper erat. Nullam in nisi vitae lectus hendrerit lacinia. Etiam scelerisque consectetur tincidunt. Praesent vulputate nunc id ante tempor, consectetur elementum felis viverra. Nullam sollicitudin purus a orci blandit sagittis. In eu leo tincidunt, iaculis nisi sollicitudin, mattis nunc. Quisque fringilla efficitur sapien. Curabitur nec sagittis justo, a semper elit. In ac purus in sem aliquet luctus a et lacus. In hac habitasse platea dictumst.",
+      "guests": 2,
+      "beds": 3,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "dailyRate": 40
+    },
+    {
+      "title": "New flats 6",
+      "city": "Warszawa",
+      "street": "pocztowa",
+      "category": "Flat",
+      "images": "http://via.placeholder.com/700x500",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at urna elit. Cras sit amet elit quis ligula rutrum aliquet. Proin lacus erat, porttitor ac mi sit amet, semper convallis mi. Vestibulum id odio at quam gravida scelerisque. Duis sit amet ligula ornare, finibus ligula a, congue felis. Etiam et semper erat. Nullam in nisi vitae lectus hendrerit lacinia. Etiam scelerisque consectetur tincidunt. Praesent vulputate nunc id ante tempor, consectetur elementum felis viverra. Nullam sollicitudin purus a orci blandit sagittis. In eu leo tincidunt, iaculis nisi sollicitudin, mattis nunc. Quisque fringilla efficitur sapien. Curabitur nec sagittis justo, a semper elit. In ac purus in sem aliquet luctus a et lacus. In hac habitasse platea dictumst.",
+      "guests": 2,
+      "beds": 3,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "dailyRate": 40
+    },
+    {
+      "title": "New flats 7",
+      "city": "Warszawa",
+      "street": "pocztowa",
+      "category": "Flat",
+      "images": "http://via.placeholder.com/700x500",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at urna elit. Cras sit amet elit quis ligula rutrum aliquet. Proin lacus erat, porttitor ac mi sit amet, semper convallis mi. Vestibulum id odio at quam gravida scelerisque. Duis sit amet ligula ornare, finibus ligula a, congue felis. Etiam et semper erat. Nullam in nisi vitae lectus hendrerit lacinia. Etiam scelerisque consectetur tincidunt. Praesent vulputate nunc id ante tempor, consectetur elementum felis viverra. Nullam sollicitudin purus a orci blandit sagittis. In eu leo tincidunt, iaculis nisi sollicitudin, mattis nunc. Quisque fringilla efficitur sapien. Curabitur nec sagittis justo, a semper elit. In ac purus in sem aliquet luctus a et lacus. In hac habitasse platea dictumst.",
+      "guests": 2,
+      "beds": 3,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "dailyRate": 40
+    }
+  ],
+    "users":  [{
+      "username": "Test 1",
+      "email": "test1@gmail.com",
+      "password": "test123"
+    },
+    {
+      "username": "Test 2",
+      "email": "test2@gmail.com",
+      "password": "test123"
+    }
+  ]
+}

@@ -22,7 +22,8 @@ const userSchema = new Schema({
     min: [8, 'Too short, min is 8 characters'],
     max: [50, 'Too long, max is 50 characters'],
     required: 'Password is required'
-  }
+  },
+  flats: [{ type: Schema.Types.ObjectId, ref: 'Flat' }]
 });
 
 userSchema.methods.isCorrectPassword = function(reqPassword) {

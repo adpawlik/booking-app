@@ -5,6 +5,7 @@ const express = require('express'),
       app = express(),
       PORT = process.env.PORT || 3000,
       userRoutes = require('./routes/users'),
+      flatRoutes = require('./routes/flats'),
       FkDb = require('./fk-db');
 
 mongoose.connect(config.DB_URI, {
@@ -12,12 +13,13 @@ mongoose.connect(config.DB_URI, {
   useUnifiedTopology: true
 }).then(() => {
   const fkDb = new FkDb();
-  /* fkDb.seeDb(); */
+  // fkDb.seedDb();
 });
 mongoose.set('useCreateIndex', true)
 
 app.use(bodyParser.json());
 app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/flats', flatRoutes);
 
 app.listen(PORT, () => {
   console.log('App is running!');
