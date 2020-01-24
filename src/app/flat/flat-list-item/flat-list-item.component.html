@@ -1,12 +1,12 @@
 <div class="flat">
-  <div class="flat__image-wrapper">
-    <a class="flat__link" routerLink="{{flat.id}}">
+  <a class="flat__link" routerLink="{{flat._id}}">
+    <div class="flat__image-wrapper">
       <img class="flat__image" src="http://via.placeholder.com/700x500" alt="">
-    </a>
-  </div>
-  <div class="flat__content">
-    <h6 class="flat__subtitle">{{flat.category}} in {{flat.city}}</h6>
-    <h4 class="flat__title">{{flat.title}}</h4>
-    <p class="flat_description">${{flat.dailyRate}} per Night</p>
-  </div>
+    </div>
+    <div class="flat__content">
+      <h6 class="flat__subtitle">{{flat.category | titlecase}} in {{flat.city | titlecase}}</h6>
+      <h4 class="flat__title">{{flat.title}}</h4>
+      <p class="flat_description">${{flat.dailyRate}} per Night</p>
+    </div>
+  </a>
 </div>

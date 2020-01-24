@@ -10,41 +10,38 @@ import { Flat } from '../shared/flat.model';
 export class FlatListComponent implements OnInit {
 
   flats: Flat[] = [];
-  allFlats: number;
-  offsetFlats: number = 0;
-  loadFlats: number = 3;
-  loader = true;
-  noMoreFlats: boolean = true;
+  flatsTotal: number;
+  page = 0;
+  perpage = 6;
+  pageTotal: number;
+  loader: boolean;
+  noMoreFlats = true;
 
   constructor(private flatService: FlatService) {}
 
   ngOnInit() {
-    const flatsObservable = this.flatService.getFlats();
-    flatsObservable.subscribe(
-      (flats: Flat[]) => {
-        this.allFlats = flats.length;
-    });
-    const moreFlat = this.flatService.getSomeFlats(this.offsetFlats, this.loadFlats);
-    moreFlat.subscribe(
-      (flats: Flat[]) => {
-        this.flats.push(...flats);
-        this.loader = false;
-        this.offsetFlats += this.loadFlats;
-        this.noMoreFlats = this.allFlats > this.offsetFlats;
+    this.getSomeFlat();
+  }
+
+  getSomeFlat() {
+    this.loader = true;
+    this.flatService
+    .getSomeFlats(this.page, this.perpage)
+    .subscribe(
+    ({page, pageTotal, flatsTotal, flats}) => {
+      this.page = page;
+      this.pageTotal = pageTotal;
+      this.flatsTotal = flatsTotal;
+      this.flats.push(...flats);
+      this.loader = false;
+      this.page++;
+      this.noMoreFlats = (this.page < this.pageTotal) ? true : false;
     });
   }
 
   moreFlats() {
     if (this.noMoreFlats) {
-      this.loader = true;
-      const moreFlat = this.flatService.getSomeFlats(this.offsetFlats, this.loadFlats);
-      moreFlat.subscribe(
-      (flats: Flat[]) => {
-        this.flats.push(...flats);
-        this.loader = false;
-        this.offsetFlats += this.loadFlats;
-        this.noMoreFlats = this.allFlats > this.offsetFlats;
-      });
+      this.getSomeFlat();
     }
   }
 

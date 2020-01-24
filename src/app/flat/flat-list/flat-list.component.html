@@ -6,6 +6,6 @@
       </div>
     </div>
     <app-loader [display]="loader"></app-loader>
-    <button class="btn std-btn flat-listing__btn" (click)="moreFlats()" *ngIf="flats.length > 0 && noMoreFlats">Load More</button>
+    <button class="btn std-btn flat-listing__btn" (click)="moreFlats()" *ngIf="flatsTotal > 0 && noMoreFlats">Load More</button>
   </div>
 </section>
