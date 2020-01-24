@@ -1,32 +1,35 @@
+const Flat = require('./models/flat');
 const User = require('./models/user');
+const fakeDbData = require('./data.json');
 class FkDb {
 
   constructor() {
-    this.users = [{
-      username: "Test 1",
-      email: "test1@gmail.com",
-      password: "test123"
-    },
-    {
-      username: "Test 2",
-      email: "test2@gmail.com",
-      password: "test123"
-    }]
+    this.flats = fakeDbData.flats;
+    this.users = fakeDbData.users;
   }
 
   async cleadDb() {
     await User.deleteMany({});
+    await Flat.deleteMany({});
   }
 
   pushDataToDb() {
-    this.users.forEach((users) => {
-      const user = new User(users);
-      user.save();
-    })
+    const user = new User(this.users[0]);
+    const user2 = new User(this.users[1]);
+    this.flats.forEach((flats) => {
+      const newFlat = new Flat(flats);
+      newFlat.user = user;
+
+      user.flats.push(newFlat);
+      newFlat.save();
+    });
+
+    user.save();
+    user2.save();
   }
 
-  seeDb() {
-    this.cleadDb();
+  async seedDb() {
+    await this.cleadDb();
     this.pushDataToDb();
   }
 }
