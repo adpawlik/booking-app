@@ -11,11 +11,11 @@ export class FlatService {
   constructor(private http: HttpClient) {}
 
   public getFlatById(flatId: string): Observable<Flat> {
-    return this.http.get('/api/v1/flats/' + flatId) as Observable<Flat>;
+    return this.http.get(`/api/v1/flats/${flatId}`) as Observable<Flat>;
   }
 
   public getFlatsInCity(page: number, perpage: number, city: string): Observable<Flat[]> {
-    return this.http.get('/api/v1/flats?perpage=' + perpage + 'page=' + page + 'city=' + city) as Observable<Flat[]>;
+    return this.http.get(`/api/v1/flats?perpage=${perpage}page=${page}city=${city}`) as Observable<Flat[]>;
   }
 
   public getFlats(): Observable<any> {
@@ -23,7 +23,7 @@ export class FlatService {
   }
 
   public getSomeFlats(page: number, perpage: number): Observable<any> {
-    return this.http.get('/api/v1/flats?perpage=' + perpage + '&page=' + page);
+    return this.http.get(`/api/v1/flats?perpage=${perpage}&page=${page}`);
   }
 
 }
