@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Flat } from '../shared/flat.model';
 
 @Component({
   selector: 'app-flat-list-item',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FlatListItemComponent implements OnInit {
 
-  @Input() flat: any;
+  @Input() flat: Flat[];
 
   constructor() { }
 

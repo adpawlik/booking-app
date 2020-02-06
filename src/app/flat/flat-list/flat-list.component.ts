@@ -35,7 +35,7 @@ export class FlatListComponent implements OnInit {
       this.flats.push(...flats);
       this.loader = false;
       this.page++;
-      this.noMoreFlats = (this.page < this.pageTotal) ? true : false;
+      this.noMoreFlats = this.page < this.pageTotal;
     });
   }
 
