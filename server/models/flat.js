@@ -8,11 +8,11 @@ const flatSchema = new Schema({
   category: { type: String, required: true, lowercase: true },
   images: { type: String, required: true },
   description: { type: String, required: true },
-  guests: Number,
-  beds: Number,
-  bedrooms: Number,
-  bathrooms: Number,
-  dailyRate: Number,
+  guests: { type: Number, required: true },
+  beds: { type: Number, required: true },
+  bedrooms: { type: Number, required: true },
+  bathrooms: { type: Number, required: true },
+  dailyRate: { type: Number, required: true },
   createdAt: { type: Date, default: Date.now },
   user: { type: Schema.Types.ObjectId, ref: 'User' }
 });
