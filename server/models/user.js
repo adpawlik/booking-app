@@ -5,13 +5,14 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   username: {
     type: String,
-    min: [5, 'Too short, min is 5 characters'],
-    max: [40, 'Too long, max is 40 characters']
+    minlength: [5, 'Too short, min is 5 characters'],
+    maxlength: [40, 'Too long, max is 40 characters'],
+    required: 'Email is required'
   },
   email: {
     type: String,
-    min: [5, 'Too short, min is 5 characters'],
-    max: [40, 'Too long, max is 40 characters'],
+    minlength: [5, 'Too short, min is 5 characters'],
+    maxlength: [40, 'Too long, max is 40 characters'],
     unique: true,
     lowercase: true,
     required: 'Email is required',
@@ -19,11 +20,12 @@ const userSchema = new Schema({
   },
   password: {
     type: String,
-    min: [8, 'Too short, min is 8 characters'],
-    max: [50, 'Too long, max is 50 characters'],
+    minlength: [8, 'Too short, min is 8 characters'],
+    maxlength: [50, 'Too long, max is 50 characters'],
     required: 'Password is required'
   },
-  flats: [{ type: Schema.Types.ObjectId, ref: 'Flat' }]
+  flats: [{ type: Schema.Types.ObjectId, ref: 'Flat' }],
+  bookings: [{ type: Schema.Types.ObjectId, ref: 'Booking' }],
 });
 
 userSchema.methods.isCorrectPassword = function(reqPassword) {

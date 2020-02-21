@@ -94,12 +94,12 @@
     "users":  [{
       "username": "Test 1",
       "email": "test1@gmail.com",
-      "password": "test123"
+      "password": "qwepoiqwe"
     },
     {
       "username": "Test 2",
       "email": "test2@gmail.com",
-      "password": "test123"
+      "password": "qwepoiqwe"
     }
   ]
 }
