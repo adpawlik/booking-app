@@ -26,4 +26,8 @@ export class FlatService {
     return this.http.get(`/api/v1/flats?perpage=${perpage}&page=${page}`);
   }
 
+  public createFlat(flat: Flat): Observable<Flat> {
+    return this.http.post('api/v1/flats', flat) as Observable<Flat>;
+  }
+
 }

@@ -20,7 +20,7 @@
                       formControlName="email">
               <mat-error *ngIf="isInvalidForm('email')" >
                 <div *ngIf="isRequired('email')">Email is required</div>
-                <div *ngIf="registerForm.controls['email'].errors.pattern">Must be valid email format!</div>
+                <div *ngIf="isInvalidPattern('email')">Must be valid email format!</div>
               </mat-error>
           </mat-form-field>
           <mat-form-field class="d-block">
