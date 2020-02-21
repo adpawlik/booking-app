@@ -12,6 +12,7 @@ router.get('', (req, res) => {
   const query = city ? { city: {$regex: `^${city}`, $options: 'i'} } : {};
 
   Flat.find(query)
+      .select('-bookings')
       .skip(page * perPage)
       .limit(perPage)
       .sort( 'createdAt' )
@@ -37,6 +38,7 @@ router.get('/:id', (req, res) => {
 
   Flat.findById(flatId)
       .populate('user', 'username -_id')
+      .populate('bookings', 'dateFrom dateTo -_id')
       .exec((err, foundFlat) => {
 
     if (err || !foundFlat) {

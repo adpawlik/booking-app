@@ -6,6 +6,7 @@ const express = require('express'),
       PORT = process.env.PORT || 3000,
       userRoutes = require('./routes/users'),
       flatRoutes = require('./routes/flats'),
+      bookingRoutes = require('./routes/bookings');
       FkDb = require('./fk-db')
       path = require('path'),
       appPath = path.join(__dirname, '..', 'dist/booking-app');
@@ -22,6 +23,7 @@ mongoose.set('useCreateIndex', true)
 app.use(bodyParser.json());
 app.use('/api/v1/users', userRoutes);
 app.use('/api/v1/flats', flatRoutes);
+app.use('/api/v1/bookings', bookingRoutes);
 
 
 if (process.env.NODE_ENV == 'production') {
