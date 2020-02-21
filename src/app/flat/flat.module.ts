@@ -11,19 +11,24 @@ import { FlatRoutingModule } from './flat-routing.module';
 import { FlatDetailComponent } from './flat-detail/flat-detail.component';
 import { SharedModule } from '../common/shared.module';
 import { MaterialModule } from '../material/material.module';
+import { FlatCreateComponent } from './flat-create/flat-create.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     FlatComponent,
     FlatListComponent,
     FlatListItemComponent,
-    FlatDetailComponent],
+    FlatDetailComponent,
+    FlatCreateComponent],
   imports: [
     CommonModule,
     FlatRoutingModule,
     SharedModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     FlatService

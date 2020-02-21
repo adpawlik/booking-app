@@ -30,12 +30,16 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  isInvalidForm(fieldName): boolean {
+  isInvalidForm(fieldName: string): boolean {
     return this.registerForm.controls[fieldName].invalid;
   }
 
-  isRequired(fieldName): boolean {
+  isRequired(fieldName: string): boolean {
     return this.registerForm.controls[fieldName].errors.required;
+  }
+
+  isInvalidPattern(fieldName: string): boolean {
+    return this.registerForm.controls[fieldName].errors.pattern;
   }
 
   register() {

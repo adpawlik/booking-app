@@ -19,6 +19,9 @@
         </ng-container>
         <ng-container *ngIf="auth.isAuthenticated()">
           <li class="menu__item">
+            <a class="menu__link" routerLink="/flat/new">New flat</a>
+          </li>
+          <li class="menu__item">
             <a class="menu__link" (click)="logout()">Logout</a>
           </li>
         </ng-container>

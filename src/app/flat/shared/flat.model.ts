@@ -1,5 +1,8 @@
-export interface Flat {
-  id: string;
+export class Flat {
+
+  static readonly CATEGORIES = ['flat', 'apartment', 'studio', 'room'];
+
+  _id: string;
   title: string;
   city: string;
   street: string;

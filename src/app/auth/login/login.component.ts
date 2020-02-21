@@ -28,12 +28,16 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  isInvalidForm(fieldName): boolean {
+  isInvalidForm(fieldName: string): boolean {
     return this.loginForm.controls[fieldName].invalid;
   }
 
-  isRequired(fieldName): boolean {
+  isRequired(fieldName: string): boolean {
     return this.loginForm.controls[fieldName].errors.required;
+  }
+
+  isInvalidPattern(fieldName: string): boolean {
+    return this.loginForm.controls[fieldName].errors.pattern;
   }
 
   login() {

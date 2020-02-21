@@ -1,0 +1,96 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="create-flat">
+      <div class="create-flat__box">
+        <h3 class="create-flat__title">Create Flat</h3>
+        <form [formGroup]="newFlatForm" (ngSubmit)="createFlat(newFlatForm)">
+          <mat-form-field class="d-block">
+            <input  matInput
+                    placeholder="Title"
+                    type="text"
+                    formControlName="title">
+            <mat-error>You must enter a value</mat-error>
+          </mat-form-field>
+          <mat-form-field class="d-block">
+            <input  matInput
+                    placeholder="City"
+                    type="text"
+                    formControlName="city">
+            <mat-error>You must enter a value</mat-error>
+          </mat-form-field>
+          <mat-form-field class="d-block">
+            <input  matInput
+                    placeholder="Street"
+                    type="text"
+                    formControlName="street">
+            <mat-error>You must enter a value</mat-error>
+          </mat-form-field>
+          <mat-form-field class="d-block">
+            <mat-label>Category</mat-label>
+            <mat-select id="category"
+                        formControlName="category">
+              <mat-option *ngFor="let category of flatCategories" [value]="category">{{category | titlecase}}</mat-option>
+            </mat-select>
+            <mat-error>You must select a value</mat-error>
+          </mat-form-field>
+          <mat-form-field class="d-block">
+            <mat-label>Textarea</mat-label>
+            <textarea matInput
+                      formControlName="description"
+                      rows="4"></textarea>
+            <mat-error>You must enter a value</mat-error>
+          </mat-form-field>
+          <div class="row">
+            <mat-form-field class="col-sm-4">
+              <input  matInput
+                      placeholder="Beds"
+                      type="number"
+                      formControlName="beds">
+              <mat-icon matSuffix>single_bed</mat-icon>
+              <mat-error>You must enter a value</mat-error>
+            </mat-form-field>
+            <mat-form-field class="col-sm-4">
+              <input  matInput
+                      placeholder="Bedrooms"
+                      type="number"
+                      formControlName="bedrooms">
+              <mat-icon matSuffix>king_bed</mat-icon>
+              <mat-error>You must enter a value</mat-error>
+            </mat-form-field>
+            <mat-form-field class="col-sm-4">
+              <input  matInput
+                      placeholder="Bathrooms"
+                      type="number"
+                      formControlName="bathrooms">
+              <mat-icon matSuffix>bathtub</mat-icon>
+              <mat-error>You must enter a value</mat-error>
+            </mat-form-field>
+            <mat-form-field class="col-sm-6">
+              <input  matInput
+                      placeholder="Guests"
+                      type="number"
+                      formControlName="guests">
+              <mat-icon matSuffix>person</mat-icon>
+              <mat-error>You must enter a value</mat-error>
+            </mat-form-field>
+            <mat-form-field class="col-sm-6">
+              <input  matInput
+                      placeholder="DailyRate"
+                      type="number"
+                      formControlName="dailyRate">
+              <mat-icon matSuffix>$</mat-icon>
+              <mat-error>You must enter a value</mat-error>
+            </mat-form-field>
+          </div>
+          <!--  -->
+          <button [disabled]="!newFlatForm.valid" type="submit" class="btn std-btn create-flat__btn">Create Flat</button>
+        </form>
+        <div *ngIf="errors.length > 0" class="alert alert-danger">
+          <p *ngFor="let error of errors" class="auth__error">
+            {{error.detail}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
