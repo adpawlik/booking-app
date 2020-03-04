@@ -13,6 +13,7 @@ import { SharedModule } from '../common/shared.module';
 import { MaterialModule } from '../material/material.module';
 import { FlatCreateComponent } from './flat-create/flat-create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FlatSearchComponent } from './flat-search/flat-search.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FlatListComponent,
     FlatListItemComponent,
     FlatDetailComponent,
-    FlatCreateComponent],
+    FlatCreateComponent,
+    FlatSearchComponent
+  ],
   imports: [
     CommonModule,
     FlatRoutingModule,
@@ -29,6 +32,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
+  ],
+  exports: [
+    FlatSearchComponent
   ],
   providers: [
     FlatService
