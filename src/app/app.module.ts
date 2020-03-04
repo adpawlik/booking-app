@@ -11,6 +11,7 @@ import { SharedModule } from './common/shared.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SearchService } from './shared/search.service';
 
 
 
@@ -18,7 +19,7 @@ import { HomeComponent } from './pages/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +31,7 @@ import { HomeComponent } from './pages/home/home.component';
     FlatModule,
     SharedModule
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

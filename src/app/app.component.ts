@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { AuthService } from './auth/shared/auth.service';
+import { SearchService } from './shared/search.service';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,6 @@ import { AuthService } from './auth/shared/auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'booking-app';
 
   constructor(private auth: AuthService) {}
 
@@ -16,5 +16,4 @@ export class AppComponent implements OnInit {
       this.auth.logout();
     }
   }
-
 }

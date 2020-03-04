@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Flat } from './flat.model';
 import { HttpClient } from '@angular/common/http';
+import { debounceTime, distinctUntilChanged, switchMap, filter, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,12 +11,25 @@ export class FlatService {
 
   constructor(private http: HttpClient) {}
 
+  public search(terms: Observable<string>): Observable<any> {
+    return terms.pipe(
+           debounceTime(800),
+           filter(term => term.length > 0),
+           distinctUntilChanged(),
+           switchMap(term => this.getFlatsByCity(term).pipe(
+             catchError(errors => {
+                return [errors.error];
+             })
+           ))
+    );
+  }
+
   public getFlatById(flatId: string): Observable<Flat> {
     return this.http.get(`/api/v1/flats/${flatId}`) as Observable<Flat>;
   }
 
-  public getFlatsInCity(page: number, perpage: number, city: string): Observable<Flat[]> {
-    return this.http.get(`/api/v1/flats?perpage=${perpage}page=${page}city=${city}`) as Observable<Flat[]>;
+  private getFlatsByCity(term: string): Observable<any> {
+    return this.http.get(`/api/v1/flats?city=${term}`);
   }
 
   public getFlats(): Observable<any> {

@@ -4,21 +4,24 @@ import { HeaderComponent } from './header/header.component';
 import { LoaderComponent } from './loader/loader.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { MapComponent } from './map/map.component';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     LoaderComponent,
-    MapComponent
+    MapComponent,
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule,
+
   ],
   exports: [
     HeaderComponent,
     LoaderComponent,
-    MapComponent
+    MapComponent,
   ]
 })
 export class SharedModule { }
